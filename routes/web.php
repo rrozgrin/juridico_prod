@@ -20,6 +20,10 @@ Route::get('/', function () {
 
 Route::resource('/users', UserController::class);
 
+Route::get('/dashboard', function () {
+    return view('app.dashboard');
+});
+
 //Exportar e Importar Usuários
 Route::get('user/export/', [UserController::class, 'export']);
 Route::get('user/import/', [UserController::class, 'importar']);
