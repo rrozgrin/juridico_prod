@@ -20,7 +20,7 @@ class UserController extends Controller
     {
         $roles = Role::all();
         $users = User::all();
-        return view('admin.users', compact('users','roles'));
+        return view('admin.users.users', compact('users','roles'));
     }
 
     /**
@@ -41,7 +41,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        return view('admin.users');
+        return view('admin.users.users');
     }
 
     /**

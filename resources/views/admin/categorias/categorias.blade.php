@@ -5,17 +5,17 @@
         <div class="card-header align-items-center py-3">
             <div class="col d-flex justify-content-betwee">
                 <div class="row">
-                <h4>Usuários cadastrados</h4>
+                <h4>Categorias cadastradas</h4>
                 </div>
 
                     <div class="col text-right">
                         <div>
-                        <a class="text-info" href="user/create">
-                            + Novo usuário
+                        <a class="text-info" href="categorias/create">
+                            + Nova categoria
                         </a>
                     </div>
                     <div>
-                        <a class="text-info" href="user/import">
+                        <a class="text-info" href="categoria/importar">
                             + Carregar dados por planilha
                         </a>
                     </div>
@@ -28,24 +28,21 @@
             <table class="table">
                 <thead class="" style="background-color: #233F75; color:#fff">
                     <tr class="text-center">
-                        <th style="width: 10%">Id</th>
-                        <th style="width: 35%" class="text-left">Nome</th>
-                        <th style="width: 10%">Área</th>
-                        <th style="width: 15%">Função</th>
-                        <th style="width: 10%">Editar</th>
+
+                        <th style="width: 33%" class="text-center">Evento</th>
+                        <th style="width: 34%">Categoria</th>
+                        <th style="width: 33%" class="text-center">Ação</th>
+
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($users as $user)
+                    {{-- @foreach ($cats as $cat) --}}
                         <tr class="text-center">
-                            <td>{{ $user->id }}</td>
-                            <td class="text-left">{{ $user->name_user }}</td>
-                            <td>{{ $user->area }}</td>
-                            <td>name_role</td>
-                            {{-- <td>{{ $user->roles->name_role }}</td> --}}
+                            <td class="text-center">EVENTO</td>
+                            <td>CATEGORIA</td>
                             <td>Editar</td>
                         </tr>
-                    @endforeach
+                    {{-- @endforeach --}}
                 </tbody>
             </table>
         </div>

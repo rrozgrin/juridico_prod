@@ -22,7 +22,7 @@ Route::get('/', function () {
 
 //resources
 Route::resource('/users', UserController::class);
-Route::resource('/categoria', CategoriaController::class);
+Route::resource('/categorias', CategoriaController::class);
 
 
 
@@ -33,5 +33,5 @@ Route::post('user/import/', [UserController::class, 'import']);
 
 //Exportar e Importar Usuários
 Route::get('categoria/export/', [CategoriaController::class, 'export']);
-Route::get('categoria/import/', [CategoriaController::class, 'importar']);
+Route::get('categoria/importar/', [CategoriaController::class, 'importar']);
 Route::post('categoria/import/', [CategoriaController::class, 'import']);

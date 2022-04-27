@@ -15,7 +15,8 @@ class CategoriaImport implements ToModel
     public function model(array $row)
     {
         return new Categoria([
-            //
+            'evento' => $row['0'],
+            'categoria' => $row['1']
         ]);
     }
 }

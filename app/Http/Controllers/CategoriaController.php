@@ -18,7 +18,7 @@ class CategoriaController extends Controller
     public function index()
     {
         $cats = Categoria::all();
-        return view('admin.categoria.categoria', compact('cats'));
+        return view('admin.categorias.categorias', compact('cats'));
     }
 
     /**
@@ -28,7 +28,7 @@ class CategoriaController extends Controller
      */
     public function create()
     {
-        return view('admin.categoria.create');
+        return view('admin.categorias.create');
     }
 
     /**
@@ -39,7 +39,7 @@ class CategoriaController extends Controller
      */
     public function store(Request $request)
     {
-        return view('admin.categoria');
+        return view('admin.categorias');
     }
 
     /**
@@ -61,7 +61,7 @@ class CategoriaController extends Controller
      */
     public function edit(Categoria $categoria)
     {
-        return view('admin.categoria.edit');
+        return view('admin.categorias.edit');
     }
 
     /**
@@ -90,12 +90,12 @@ class CategoriaController extends Controller
     public function import()
     {
         Excel::import(new CategoriaImport, request()->file('file'));
-        return redirect('/categoria');
+        return redirect('/categorias');
     }
 
     public function importar()
     {
-        return view('admin.categoria.categoria-importar');
+        return view('admin.categorias.categoria-importar');
     }
 
     public function export()
